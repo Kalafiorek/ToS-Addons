@@ -1,6 +1,7 @@
-MarketeerEX
+MarktioneerEX
 --
 This is an updated and improved version of **Fiote's Marktioneer** addon.  
+Please uninstall any old version of Marktioneer before using this one.
 
 [<img src="https://i.imgur.com/EOxfc62.png">](https://i.imgur.com/abHcla8.png)
 
