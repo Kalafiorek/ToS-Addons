@@ -1,0 +1,16 @@
+[
+    {
+        "name" : "MarktioneerEX",
+        "file" : "marktioneerex",
+        "extension" : "ipf",
+        "fileVersion" : "v1.0.0",
+        "releaseTag" : "marketdx",
+        "unicode" : "🍂",
+        "description" : "Updated and improved version of Fiote's Marktioneer addon. Check the README for details.",
+        "tags" : [
+			"market",
+			"inventory",
+			"tooltip"
+        ]
+    }
+]
