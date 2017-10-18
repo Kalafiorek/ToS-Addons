@@ -1,9 +1,22 @@
 [
     {
+        "name" : "FishAlarm",
+        "file" : "fishalarm",
+        "extension" : "ipf",
+        "fileVersion" : "v1.0.0",
+        "releaseTag" : "fishalarm",
+        "unicode" : "🍂",
+        "description" : "Switches focus to game when you've finished fishing or filled your tackle box.",
+        "tags" : [
+			"fishing",
+			"ui"
+        ]
+    },
+    {
         "name" : "MarktioneerEX",
         "file" : "marktioneerex",
         "extension" : "ipf",
-        "fileVersion" : "v1.0.0",
+        "fileVersion" : "v1.0.1",
         "releaseTag" : "marketdx",
         "unicode" : "🍂",
         "description" : "Updated and improved version of Fiote's Marktioneer addon. Check the README for details.",

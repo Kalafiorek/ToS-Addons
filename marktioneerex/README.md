@@ -1,5 +1,4 @@
-MarketeerEX
---
+## ![MarktioneerEX](https://i.imgur.com/liCk0jp.png)
 This is an updated and improved version of **Fiote's Marktioneer** addon.  
 
 [<img src="https://i.imgur.com/EOxfc62.png">](https://i.imgur.com/abHcla8.png)
@@ -29,5 +28,5 @@ Changelog
 
 * **1.0.0**
   - Initial ~~broken~~ working release.  
-  
-  
+* **1.0.1**
+  - Fix for 17.10.2017 patch.

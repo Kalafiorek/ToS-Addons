@@ -1,10 +1,12 @@
 ------------------------------------------------------------------------------
--- MarktioneerEX [1.0.0]
+-- MarktioneerEX [1.0.1]
 ------------------------------------------------------------------------------
 -- This is an updated and improved version of Fiote's Marktioneer addon
 -- (https://github.com/fiote/ToS-Addons). Fixes include working "My Items",
 -- compatibility with "Market Show Level" addon, ability to post undercut
 -- items and other (mostly minor) things added/removed/modified. Enjoy!
+------------------------------------------------------------------------------
+-- 1.0.1 - Fix for the 17.10.2017 patch.
 ------------------------------------------------------------------------------
 
 local addon_dev = "Kalafiorek";
@@ -277,7 +279,7 @@ function marktioneerex.createReadMarketButton(frame)
 	ctrl:SetText("{@st42}Read Market{/}");
 	ctrl:SetClickSound('button_click_big');
 	ctrl:SetOverSound('button_over');
-	ctrl:SetEventScript(ui.LBUTTONUP,'marktioneerex_clickButton()');
+	ctrl:SetEventScript(ui.LBUTTONUP,'marktioneerex_clickButton()',true);
 	marktioneerex.dumpButton = ctrl;
 end
 
@@ -294,11 +296,11 @@ function marktioneerex.createMyItemsFrame()
 	marktioneerex.adjustButtons();
 
 	local btn = GET_CHILD_RECURSIVELY(frame,'button_1_1_1');
-	btn:SetEventScript(ui.LBUTTONUP,'MARKET_CABINET_MODE');
+	btn:SetEventScript(ui.LBUTTONUP,'MARKET_CABINET_MODE', false);
 	btn:SetSkinName('tab2_btn');
 
 	local btnClose = GET_CHILD_RECURSIVELY(frame,'close');
-	btnClose:SetEventScript(ui.LBUTTONUP,'marktioneerex_closeMyItems');
+	btnClose:SetEventScript(ui.LBUTTONUP,'marktioneerex_closeMyItems', false);
 
 	-- TITLE
 	local titleBox = GET_CHILD(frame,"title_1");
@@ -316,7 +318,7 @@ function marktioneerex.createMyItemsFrame()
 
 	local btnAll = GET_CHILD_RECURSIVELY(frame,'button_2');
 	btnAll:SetText('{@st41b}Refresh All{/}');	
-	btnAll:SetEventScript(ui.LBUTTONUP, 'marktioneerex_refreshAll');
+	btnAll:SetEventScript(ui.LBUTTONUP, 'marktioneerex_refreshAll', false);
 	btnAll:SetEnable(0);
 	if (not marktioneerex.refreshing) then btnAll:SetEnable(1); end
 
@@ -456,7 +458,7 @@ function marktioneerex.createMyItemsFrame()
 		btn:SetSkinName('test_gray_button');
 		btn:SetAnimation("MouseOnAnim", "btn_mouseover");
 		btn:SetAnimation("MouseOffAnim", "btn_mouseoff");
-		btn:SetEventScript(ui.LBUTTONUP, 'marktioneerex_sellMyItem');
+		btn:SetEventScript(ui.LBUTTONUP, 'marktioneerex_sellMyItem', false);
 		btn:SetUserValue("GUID",GUID);
 
 		local btn = ctrlSet:CreateOrGetControl('button', 'market_myitems_refresh'..GUID, 10, 10, 100, 45);
@@ -466,7 +468,7 @@ function marktioneerex.createMyItemsFrame()
 		btn:SetSkinName('test_gray_button');
 		btn:SetAnimation("MouseOnAnim", "btn_mouseover");
 		btn:SetAnimation("MouseOffAnim", "btn_mouseoff");
-		btn:SetEventScript(ui.LBUTTONUP, 'marktioneerex_refreshItem');
+		btn:SetEventScript(ui.LBUTTONUP, 'marktioneerex_refreshItem', false);
 		btn:SetEventScriptArgString(ui.LBUTTONUP,'');
 		btn:SetEventScriptArgNumber(ui.LBUTTONUP,itemID);
 		btn:SetUserValue("itemID", itemID);
@@ -507,7 +509,7 @@ function marktioneerex.createMyItemsButton(frame,left)
 	ctrl:SetClickSound('button_click');
 	ctrl:SetOverSound('button_over');
 	ctrl:SetText("{@st66b18}My Items{/}");
-	ctrl:SetEventScript(ui.LBUTTONUP,'marktioneerex_openMyItems()');
+	ctrl:SetEventScript(ui.LBUTTONUP,'marktioneerex_openMyItems()',true);
 	return left + marktioneerex.newwidth;
 end
 
