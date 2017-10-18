@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 ## ![MarktioneerEX](https://i.imgur.com/liCk0jp.png)
+=======
+MarktioneerEX
+--
+>>>>>>> 42f53b05dc9a14c0bbfd3f5fa7360dcfd96673f4
 This is an updated and improved version of **Fiote's Marktioneer** addon.  
+Please uninstall any old version of Marktioneer before using this one.
 
 [<img src="https://i.imgur.com/EOxfc62.png">](https://i.imgur.com/abHcla8.png)
 
@@ -28,5 +34,10 @@ Changelog
 
 * **1.0.0**
   - Initial ~~broken~~ working release.  
+<<<<<<< HEAD
 * **1.0.1**
   - Fix for 17.10.2017 patch.
+=======
+  
+  
+>>>>>>> 42f53b05dc9a14c0bbfd3f5fa7360dcfd96673f4
